@@ -1,0 +1,91 @@
+.welcome-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  padding: 40px;
+  color: white;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(50px, -50px);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.banner-content h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.banner-content h1 span {
+  color: #fff;
+  font-style: italic;
+}
+
+.banner-content p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+.banner-decoration {
+  font-size: 80px;
+  opacity: 0.3;
+  position: relative;
+  z-index: 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.decoration-emoji {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .welcome-banner {
+    padding: 30px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-content h1 {
+    font-size: 24px;
+  }
+
+  .banner-decoration {
+    font-size: 60px;
+    margin-top: 20px;
+  }
+
+  .welcome-banner::before {
+    width: 150px;
+    height: 150px;
+  }
+}

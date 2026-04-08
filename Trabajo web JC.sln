@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotwheelsCollector", "HotwheelsCollector\HotwheelsCollector.csproj", "{5F28C6F8-DC03-F302-4EED-4D9D258085D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "hotwheels-collector", "hotwheels-collector", "{F158D9F1-3AB0-DAE0-7B62-99F27FD0CE8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{A5C87BEB-C3F9-F771-5523-4413418E315B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotwheelsCollector", "hotwheels-collector\api\HotwheelsCollector.csproj", "{BE41125A-66CD-2579-D63E-2BFFB1EC5487}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F28C6F8-DC03-F302-4EED-4D9D258085D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F28C6F8-DC03-F302-4EED-4D9D258085D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F28C6F8-DC03-F302-4EED-4D9D258085D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F28C6F8-DC03-F302-4EED-4D9D258085D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE41125A-66CD-2579-D63E-2BFFB1EC5487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE41125A-66CD-2579-D63E-2BFFB1EC5487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE41125A-66CD-2579-D63E-2BFFB1EC5487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE41125A-66CD-2579-D63E-2BFFB1EC5487}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A5C87BEB-C3F9-F771-5523-4413418E315B} = {F158D9F1-3AB0-DAE0-7B62-99F27FD0CE8A}
+		{BE41125A-66CD-2579-D63E-2BFFB1EC5487} = {A5C87BEB-C3F9-F771-5523-4413418E315B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CB791A2-409A-4179-833F-5B7A361C1AED}
+	EndGlobalSection
+EndGlobal

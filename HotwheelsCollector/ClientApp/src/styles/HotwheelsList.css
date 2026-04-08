@@ -1,0 +1,115 @@
+.hotwheels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.hotwheels-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hotwheels-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.condition-badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+}
+
+.condition-new { background-color: #4CAF50; color: white; }
+.condition-mint { background-color: #2196F3; color: white; }
+.condition-excellent { background-color: #FF9800; color: white; }
+.condition-good { background-color: #FFC107; color: #333; }
+.condition-fair { background-color: #FF5722; color: white; }
+.condition-poor { background-color: #9E9E9E; color: white; }
+
+.card-body {
+  padding: 16px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.detail-row .label {
+  font-weight: 600;
+  color: #666;
+}
+
+.detail-row .value {
+  color: #333;
+}
+
+.detail-row .price {
+  font-weight: 600;
+  color: #2ecc71;
+}
+
+.detail-row .notes {
+  font-style: italic;
+  color: #999;
+  word-break: break-word;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  padding: 12px 16px;
+  border-top: 1px solid #eee;
+}
+
+.btn-edit,
+.btn-delete {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-edit {
+  background-color: #2196F3;
+  color: white;
+}
+
+.btn-edit:hover {
+  opacity: 0.9;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-delete:hover {
+  opacity: 0.9;
+}

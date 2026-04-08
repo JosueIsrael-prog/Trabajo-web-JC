@@ -1,0 +1,88 @@
+.stats-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-left: 4px solid;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.stats-icon {
+  font-size: 32px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.stats-content {
+  flex: 1;
+}
+
+.stats-label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+}
+
+.stats-value {
+  margin: 8px 0 0 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.stats-blue {
+  border-left-color: #2196F3;
+}
+
+.stats-blue .stats-value {
+  color: #2196F3;
+}
+
+.stats-green {
+  border-left-color: #4CAF50;
+}
+
+.stats-green .stats-value {
+  color: #4CAF50;
+}
+
+.stats-orange {
+  border-left-color: #FF9800;
+}
+
+.stats-orange .stats-value {
+  color: #FF9800;
+}
+
+.stats-purple {
+  border-left-color: #9C27B0;
+}
+
+.stats-purple .stats-value {
+  color: #9C27B0;
+}
+
+@media (max-width: 768px) {
+  .stats-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stats-label {
+    font-size: 11px;
+  }
+
+  .stats-value {
+    font-size: 24px;
+  }
+}
