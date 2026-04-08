@@ -16,7 +16,7 @@ builder.Services.AddSwaggerGen();
 
 // Database - SQLite
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite("Data Source=hotwheels.db"));
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // JWT Service
 builder.Services.AddScoped<JwtService>();
@@ -48,6 +48,28 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+
+// Crear base de datos y aplicar migraciones automáticamente
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<ApplicationDbContext>();
+        
+        // Opción 1: Usar migraciones (recomendado para producción)
+        // context.Database.Migrate();
+        
+        // Opción 2: Si no hay migraciones, crear desde cero
+        context.Database.EnsureCreated();
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Error creando o actualizando la base de datos");
+    }
+}
 
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
